@@ -4,8 +4,9 @@
 
 #include "stdafx.h"
 #include "DBMS.h"
-
 #include "MainFrm.h"
+#include "LsiderView.h"
+#include "MainView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -44,6 +45,11 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (CFrameWnd::OnCreate(lpCreateStruct) == -1)
 		return -1;
 
+	//添加了界面的图标
+	HICON m_hIcon = AfxGetApp()->LoadIcon(IDI_ICON2);
+	SetIcon(m_hIcon, TRUE);
+	SetIcon(m_hIcon, FALSE);
+
 	// 创建一个视图以占用框架的工作区
 	if (!m_wndView.Create(NULL, NULL, AFX_WS_DEFAULT_VIEW, CRect(0, 0, 0, 0), this, AFX_IDW_PANE_FIRST, NULL))
 	{
@@ -70,7 +76,6 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndToolBar);
 
-
 	return 0;
 }
 
@@ -83,6 +88,7 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 
 	cs.dwExStyle &= ~WS_EX_CLIENTEDGE;
 	cs.lpszClass = AfxRegisterWndClass(0);
+	m_strTitle = TEXT("Star-DBMS");			//修改了界面的标题
 	return TRUE;
 }
 
@@ -102,7 +108,6 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 
 // CMainFrame 消息处理程序
-
 void CMainFrame::OnSetFocus(CWnd* /*pOldWnd*/)
 {
 	// 将焦点前移到视图窗口
@@ -119,3 +124,34 @@ BOOL CMainFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO*
 	return CFrameWnd::OnCmdMsg(nID, nCode, pExtra, pHandlerInfo);
 }
 
+
+BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
+{
+	// TODO: 在此添加专用代码和/或调用基类
+
+	//添加了分隔栏的实现代码
+	CRect rect;
+	GetClientRect(&rect);
+
+	if (!m_wndSplitter.CreateStatic(this, 1, 2))
+	{
+		return FALSE;
+	}
+	if (!m_wndSplitter.CreateView(0, 0,
+		RUNTIME_CLASS(LsiderView),
+		CSize(200, 0), pContext))
+	{
+		return FALSE;
+	}
+
+	if (!m_wndSplitter.CreateView(0, 1,
+		RUNTIME_CLASS(MainView),
+		CSize(rect.Width()-200, 0), pContext))
+	{
+		return FALSE;
+	}
+
+	return TRUE;
+
+	//return CFrameWnd::OnCreateClient(lpcs, pContext);
+}
