@@ -36,6 +36,7 @@ protected:  // 控件条嵌入成员
 	CToolBar          m_wndToolBar;
 	CStatusBar        m_wndStatusBar;
 	CChildView    m_wndView;
+	CSplitterWnd		m_wndSplitter;   //声明一个用于区分client area和目录的分隔栏
 
 // 生成的消息映射函数
 protected:
@@ -43,6 +44,7 @@ protected:
 	afx_msg void OnSetFocus(CWnd *pOldWnd);
 	DECLARE_MESSAGE_MAP()
 
+	virtual BOOL OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext);
 };
 
 
