@@ -51,11 +51,12 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	SetIcon(m_hIcon, FALSE);
 
 	// 创建一个视图以占用框架的工作区
+	/*
 	if (!m_wndView.Create(NULL, NULL, AFX_WS_DEFAULT_VIEW, CRect(0, 0, 0, 0), this, AFX_IDW_PANE_FIRST, NULL))
 	{
 		TRACE0("未能创建视图窗口\n");
 		return -1;
-	}
+	}*/
 
 	if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
 		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
@@ -108,12 +109,13 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 
 // CMainFrame 消息处理程序
-void CMainFrame::OnSetFocus(CWnd* /*pOldWnd*/)
-{
+//void CMainFrame::OnSetFocus(CWnd* /*pOldWnd*/)
+//{
 	// 将焦点前移到视图窗口
-	m_wndView.SetFocus();
-}
+	//m_wndView.SetFocus();
+//}
 
+/*
 BOOL CMainFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO* pHandlerInfo)
 {
 	// 让视图第一次尝试该命令
@@ -122,7 +124,7 @@ BOOL CMainFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO*
 
 	// 否则，执行默认处理
 	return CFrameWnd::OnCmdMsg(nID, nCode, pExtra, pHandlerInfo);
-}
+}*/
 
 
 BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
