@@ -1,21 +1,20 @@
-//文件操作辅助类FileHelper实现文件
 #include "stdafx.h"
-#include "AppException.h"
 #include "FileHelper.h"
+#include <fileapi.h>
+
 
 //创建文件
 bool FileHelper::CreateFile(const CString fileName)
 {
-	try
-	{
+	try {
 		//创建文件夹
 		for (int i = 0; i < fileName.GetLength(); i++)
 		{
-			if (fileName.GetAt(i) == _T('/') || fileName.GetAt(i) == _T('\\'))
+			if ((fileName.GetAt(i) == _T('/') || fileName.GetAt(i) == _T('\\')) && i != 2)
 			{
 				CString fileDirectory;
 				fileDirectory = fileName.Left(i);
-				if (!CreateDirectory(fileDirectory, NULL))
+				if (!CreateDirectory(fileDirectory, NULL) && GetLastError() != 183)
 					return false;
 			}
 		}
@@ -27,38 +26,27 @@ bool FileHelper::CreateFile(const CString fileName)
 		newFile.Close();
 
 		return true;
-	} //异常处理：创建文件失败
-	catch (CException* e)    
-	{
+	}
+	//异常处理：创建文件失败
+	catch (CException *e) {
 		e->Delete();
-		throw new CAppException(_T("创建文件失败！"));
+		throw new CAppException(_T("Failed to create file!"));
 	}
-	catch (...)
-	{
-		throw new CAppException(_T("创建文件失败！"));
-	}
-
 	return false;
+
 }
 
 //判断文件是否合法
 bool FileHelper::IsVaildFile(const CString fileName)
 {
-	try
-	{
+	try {
 		CFileFind finder;
 		bool isFileExist = finder.FindFile(fileName);
-
 		return isFileExist;
-	} //异常处理：检查文件时出错
-	catch (CException* e)      
-	{
-		e->Delete();
-		throw new CAppException(_T("检查文件时出错！"));
 	}
-	catch (...)
-	{
-		throw new CAppException(_T("检查文件时出错！"));
+	catch (CException *e) {
+		e->Delete();
+		throw new CAppException(_T("Failed to open file"));
 	}
 
 	return false;
