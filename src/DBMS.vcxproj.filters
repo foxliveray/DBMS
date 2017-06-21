@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Entity">
+      <UniqueIdentifier>{3d712387-55f0-40e1-bb91-bf0427be364d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Entity">
+      <UniqueIdentifier>{84dbbc63-669c-4193-bd62-f2714bc59cf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\View">
+      <UniqueIdentifier>{c8b41986-eaf8-4fd6-8d17-4d6ad60c0985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\View">
+      <UniqueIdentifier>{02e0b931-d2ec-47a4-9c20-615955374020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\global">
+      <UniqueIdentifier>{4e60347e-b353-4892-835e-3083755e7e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Logic">
+      <UniqueIdentifier>{cb098ecf-e2cf-4abc-942b-b518d13bb215}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Logic">
+      <UniqueIdentifier>{0351e374-e499-4160-9044-07d5b557e39e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Dao">
+      <UniqueIdentifier>{600c434b-e488-4036-9949-e8946c88b575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Dao">
+      <UniqueIdentifier>{b8235b79-3d64-4c21-9233-b21c5120117e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Util">
+      <UniqueIdentifier>{895c28c6-191a-47ca-a9a1-4c56bfb3ad8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Util">
+      <UniqueIdentifier>{c1cba3a2-d12f-458e-a64e-c749c8fea5d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBMS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CDBEntity.h">
+      <Filter>头文件\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CTableEntity.h">
+      <Filter>头文件\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CFieldEntity.h">
+      <Filter>头文件\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CRecordEntity.h">
+      <Filter>头文件\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="DBView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="LsiderView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="MainView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="TBView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructure.h">
+      <Filter>头文件\global</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>头文件\global</Filter>
+    </ClInclude>
+    <ClInclude Include="AppException.h">
+      <Filter>头文件\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="DBMSDoc.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="DBDao.h">
+      <Filter>头文件\Dao</Filter>
+    </ClInclude>
+    <ClInclude Include="CharHelper.h">
+      <Filter>头文件\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="DBLogic.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHelper.h">
+      <Filter>头文件\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="FileLogic.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="TableDao.h">
+      <Filter>头文件\Dao</Filter>
+    </ClInclude>
+    <ClInclude Include="TableLogic.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldLogic.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldDao.h">
+      <Filter>头文件\Dao</Filter>
+    </ClInclude>
+    <ClInclude Include="alterFieldView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntegrityEntity.h">
+      <Filter>头文件\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegrityLogic.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegrityDao.h">
+      <Filter>头文件\Dao</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="LogDao.h">
+      <Filter>头文件\Dao</Filter>
+    </ClInclude>
+    <ClInclude Include="CLogEntity.h">
+      <Filter>头文件\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="LogLogic.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="CBTree.h">
+      <Filter>头文件\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="RegisterView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordDlg.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="AlterDatabaseView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteDatabaseView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="AlterTableView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteTableView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeHelper.h">
+      <Filter>头文件\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordDao.h">
+      <Filter>头文件\Dao</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordLogic.h">
+      <Filter>头文件\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateRecordView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectView.h">
+      <Filter>头文件\View</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DBMS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBEntity.cpp">
+      <Filter>源文件\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CTableEntity.cpp">
+      <Filter>源文件\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CFieldEntity.cpp">
+      <Filter>源文件\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="CRecordEntity.cpp">
+      <Filter>源文件\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="LsiderView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="MainView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="DBView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="TBView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="AppException.cpp">
+      <Filter>源文件\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="DBMSDoc.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="DBDao.cpp">
+      <Filter>源文件\Dao</Filter>
+    </ClCompile>
+    <ClCompile Include="CharHelper.cpp">
+      <Filter>源文件\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="DBLogic.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="FileHelper.cpp">
+      <Filter>源文件\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLogic.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="TableDao.cpp">
+      <Filter>源文件\Dao</Filter>
+    </ClCompile>
+    <ClCompile Include="TableLogic.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldLogic.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldDao.cpp">
+      <Filter>源文件\Dao</Filter>
+    </ClCompile>
+    <ClCompile Include="alterFieldView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntegrityEntity.cpp">
+      <Filter>源文件\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegrityLogic.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegrityDao.cpp">
+      <Filter>源文件\Dao</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="LogDao.cpp">
+      <Filter>源文件\Dao</Filter>
+    </ClCompile>
+    <ClCompile Include="CLogEntity.cpp">
+      <Filter>源文件\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="LogLogic.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="RecordDlg.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="RecordDao.cpp">
+      <Filter>源文件\Dao</Filter>
+    </ClCompile>
+    <ClCompile Include="RecordLogic.cpp">
+      <Filter>源文件\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeHelper.cpp">
+      <Filter>源文件\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="AlterDatabaseView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteDatabaseView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="AlterTableView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteTableView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateRecordView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectView.cpp">
+      <Filter>源文件\View</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DBMS.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DBMS.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DBMS.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Title.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Title.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\db.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\tb.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
